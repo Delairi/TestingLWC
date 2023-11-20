@@ -1,0 +1,15 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item>
+            <span>Descripcion del producto</span>
+            <lightning-button icon-name="utility:add"
+            title="See products"
+            onclick={handleButton}></lightning-button>
+            <template for:each={products} for:item="product">
+                <div key={product.Id}>
+                    {product.Name}
+                </div>
+            </template>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
